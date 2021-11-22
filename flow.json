@@ -1,0 +1,55 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "NonFungibleToken"
+    }
+  },
+  "contracts": {
+    "NonFungibleToken": "./contracts/nft.cdc",
+    "ProvenancedTest1": "./contracts/example_nft.cdc"
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "NonFungibleToken": {
+      "address": "fb7fb8b56a762069",
+    "key": {
+        "type": "hex",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA3_256",
+        "privateKey": "d905f655c2259fca44c15f691e914467b6cff870a2ca9ce05f550389afa8b3ef"
+      }
+    },
+    "ProvenancedTest1": {
+      "address": "e601ef1f3ff75421",
+      "key": {
+        "type": "hex",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA3_256",
+        "privateKey": "7356bb3dab5c0e67841275c373ddc3ac8d76a902d9c921fc6e89c806c3e98985"
+      }
+    },
+    "tester1": {
+      "address": "8d471205996c594e",
+      "key": {
+        "type": "hex",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA3_256",
+        "privateKey": "7356bb3dab5c0e67841275c373ddc3ac8d76a902d9c921fc6e89c806c3e98985"
+      }
+    }
+  },
+  "deployments": {
+    "testnet": {
+      "NonFungibleToken": ["NonFungibleToken"],
+      "ProvenancedTest1": ["ProvenancedTest1"]
+    }
+  }
+}
